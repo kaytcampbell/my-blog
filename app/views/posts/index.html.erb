@@ -1,25 +1,102 @@
-<h1>Listing posts</h1>
+	<!-- Primary Page Layout
+	================================================== -->
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Body</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+	<!-- Delete everything in this .container and get started on your own site! -->
+    <div class="top-row">
+    	
+    </div>
+	<div class="container">
+    	<div class="four columns">
+        	<h1 class="add-bottom" style="margin-top: 40px">Kayt's Blog</h1>
+    	</div> 
+        <div class="three columns">
+            <div class="right"><%= link_to image_tag('home-btn.png'), :action => 'index' %></div>
+        </div>
+        <div class="three columns">    
+            <div class="right"><%= link_to image_tag('blog-btn.png'), :action => 'index' %></div>
+        </div>
+        <div class="three columns">    
+            <div class="right"><%= link_to image_tag('about-btn.png'), :action => 'index' %></div>
+        </div>
+        <div class="three columns">    
+            <div class="right"><%= link_to image_tag('contact-btn.png'), :action => 'index' %></div>
+        </div>    
+     <div class="iphone">   
+        <div class="six columns">
+            <div class="small-btns"><a href="#">Home</a></div>
+        </div>
+        <div class="six columns">    
+            <div class="small-btns"><a href="#">Blog</a></div>
+        </div>
+        <div class="six columns">    
+            <div class="small-btns"><a href="#">About</a></div>
+        </div>
+        <div class="six columns">    
+            <div class="small-btns"><a href="#">Contact</a></div>
+        </div>    
+       </div> 
+    </div>
+    <div class="container body">
+		<div class="sixteen columns">
+        	<hr />
+        </div> 
+        <div class="twelve columns">
+        	<div class="twelve columns">
+			
+<!--			  <tr>
+				<th><h3>Title</h3></th>
+				<th>Body</th>
+				<th></th>
+				<th></th>
+				<th></th>
+			  </tr>
+-->			
+			<% @posts.each do |post| %>
+			  
+				<h3><%= post.title %></h3>
+				<p><%= post.body %></p>
+				<%= link_to 'Show', post %><br />
+				<%= link_to 'Edit', edit_post_path(post) %><br />
+				<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %><br />
+			  
+			<% end %>
+			
+			
+			<br />
+			
+			<%= link_to 'New Post', new_post_path %>
+            <hr class="light" />
+		</div>
+        <div class="twelve columns">
+			<h3>This is Another Blog Post</h3>
+			<p>Skeleton is a small collection of well-organized CSS &amp; JS files that can help you rapidly develop sites that look beautiful at any size, be it a 17" laptop screen or an iPhone. It's based on a responsive grid, but also provides very basic CSS for typography, buttons, tabs, forms and media queries. Go ahead, resize this super basic page to see the grid in action.</p>
+            <hr class="light" />
+		</div>
+        <div class="twelve columns">
+			<h3>This Site Brought to You By...</h3>
+			<p>Skeleton is a small collection of well-organized CSS &amp; JS files that can help you rapidly develop sites that look beautiful at any size, be it a 17" laptop screen or an iPhone. It's based on a responsive grid, but also provides very basic CSS for typography, buttons, tabs, forms and media queries. Go ahead, resize this super basic page to see the grid in action.</p>
+            <p><a href="http://www.getskeleton.com/#examples" target="_blank">Find out more about Skeleton here</a></p>
+		</div>
+        </div>
+        <div class="three columns offset-by-one">
+			<h3>Side Nav Links</h3>
+			<p>Some links are below:</p>
+			<ul class="square">
+				<li><a href="#">Side Nav Link #1</a></li>
+				<li><a href="#">Side Nav Link #2</a></li>
+				<li><a href="#">Side Nav Link #3</a></li>
+			</ul>
+		</div>
+        <div class="sixteen columns">
+        	<hr />
+            <h6>This is the footer.</h6>
+        </div>
+	</div><!-- container -->
 
-<% @posts.each do |post| %>
-  <tr>
-    <td><%= post.title %></td>
-    <td><%= post.body %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+	<!-- JS
+	================================================== -->
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script src="javascripts/tabs.js"></script>
 
-<br />
-
-<%= link_to 'New Post', new_post_path %>
+<!-- End Document
+================================================== -->
