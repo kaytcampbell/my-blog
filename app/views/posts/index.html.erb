@@ -1,42 +1,7 @@
-	<!-- Primary Page Layout
-	================================================== -->
+	
 
-	<!-- Delete everything in this .container and get started on your own site! -->
-    <div class="top-row">
-    	
-    </div>
-	<div class="container">
-    	<div class="four columns">
-        	<h1 class="add-bottom" style="margin-top: 40px">Kayt's Blog</h1>
-    	</div> 
-        <div class="three columns">
-            <div class="right"><%= link_to image_tag('home-btn.png'), :action => 'index' %></div>
-        </div>
-        <div class="three columns">    
-            <div class="right"><%= link_to image_tag('blog-btn.png'), :action => 'index' %></div>
-        </div>
-        <div class="three columns">    
-            <div class="right"><%= link_to image_tag('about-btn.png'), :action => 'index' %></div>
-        </div>
-        <div class="three columns">    
-            <div class="right"><%= link_to image_tag('contact-btn.png'), :action => 'index' %></div>
-        </div>    
-     <div class="iphone">   
-        <div class="six columns">
-            <div class="small-btns"><a href="#">Home</a></div>
-        </div>
-        <div class="six columns">    
-            <div class="small-btns"><a href="#">Blog</a></div>
-        </div>
-        <div class="six columns">    
-            <div class="small-btns"><a href="#">About</a></div>
-        </div>
-        <div class="six columns">    
-            <div class="small-btns"><a href="#">Contact</a></div>
-        </div>    
-       </div> 
-    </div>
-    <div class="container body">
+    <div class="container">
+	<%= render 'header' %>
 		<div class="sixteen columns">
         	<hr />
         </div> 
@@ -87,10 +52,9 @@
 				<li><a href="#">Side Nav Link #3</a></li>
 			</ul>
 		</div>
-        <div class="sixteen columns">
-        	<hr />
-            <h6>This is the footer.</h6>
-        </div>
+	
+	<%= render 'footer' %>
+	
 	</div><!-- container -->
 
 	<!-- JS
@@ -98,5 +62,3 @@
 	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 	<script src="javascripts/tabs.js"></script>
 
-<!-- End Document
-================================================== -->

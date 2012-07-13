@@ -52,13 +52,31 @@
 /* #Basic Styles
 ================================================== */
 	body {
-		background: #fff;
 		font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		color: #444;
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 		-webkit-text-size-adjust: 100%;
- }
-
+		background:url("wood_pattern.jpg");
+		background-repeat:repeat;
+	}
+ 	#wrapper {
+		-moz-border-radius: 10px; /* Firefox */
+		-webkit-border-radius: 10px; /* Safari, Chrome */
+		border-radius: 10px; /* CSS3 */
+		background-color: #fffcf2;
+		margin-left: auto;
+		margin-right: auto;
+		width: 960px;
+		height: 100%;
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	.header {
+		background:url("header_teal_bg.jpg");
+		background-repeat: repeat-x;
+		height: 115px;
+		width: 100%;
+	}
 
 /* #Typography
 ================================================== */
@@ -333,17 +351,53 @@
 		font-weight: normal;
 		font-size: 13px;
 		color: #444; }
+/* Nav Styles
+================================================== */
+	.social-media{
+		float: right;
+		margin-top: 30px;
+	}
+	.social-media ul{
+		float: right;
+	}
+	.social-media li{
+		float: right;
+		list-style-type: none;
+		padding-left: 15px;
+	}
+	.social-media a:hover{
+		background-position: 0px -56px;
+	}
+	.facebook a{
+		background:url("facebook-badge.png") bottom left no-repeat;
+		float: left;
+		width: 56px;
+		height: 56px;
+		text-indent: -9000px;
+	}
+	.twitter a{
+		background:url("twitter-badge.png") bottom left no-repeat;
+		float: left;
+		width: 56px;
+		height: 56px;
+		text-indent: -9000px;
+	}
+	.pinterest a{
+		background:url("pinterest-badge.png") bottom left no-repeat;
+		float: left;
+		width: 56px;
+		height: 56px;
+		text-indent: -9000px;
+	}
+	.facebook a:hover, .twitter a:hover, .pinterest a:hover {
+		background-position: top left;
+	}
 
 /* #Misc
 ================================================== */
 	.remove-bottom { margin-bottom: 0 !important; }
 	.half-bottom { margin-bottom: 10px !important; }
 	.add-bottom { margin-bottom: 20px !important; }
-	
-	body{
-		background:url("bg-pat.jpg");
-		background-repeat:repeat;
-	}
 	.container.body{
 		background:url("cream-pat.jpg") repeat;
 	}
