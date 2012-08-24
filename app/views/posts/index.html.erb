@@ -6,30 +6,14 @@
         </div> 
         <div class="twelve columns">
         	<div class="twelve columns">
-			
-<!--			  <tr>
-				<th><h3>Title</h3></th>
-				<th>Body</th>
-				<th></th>
-				<th></th>
-				<th></th>
-			  </tr>
--->			
-			<% @posts.each do |post| %>
-			  
-				<h3><%= post.title %></h3>
-				<p>Posted <%= post.created_at.strftime("%B %d, %Y") %></p>
-				<p><%= post.body %></p>
-				<%= link_to 'View Post', post %> | 
-				<%= link_to 'Edit', edit_post_path(post) %> | 
-				<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %><br />
-			  
-			<% end %>
+			<h1>Posts</h1>
+			<%= render @posts %>
+			<br />
+			<%= link_to 'New Post', new_post_path %>
 			
 			
 			<br />
 			
-			<%= link_to 'New Post', new_post_path %>
             <hr class="light" />
 		</div>
         <div class="twelve columns">
