@@ -56,13 +56,9 @@
 		color: #444;
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 		-webkit-text-size-adjust: 100%;
-		background:url("wood_pattern.jpg");
-		background-repeat:repeat;
+		background-color:#fbf1d7;
 	}
- 	#wrapper {
-		-moz-border-radius: 10px; /* Firefox */
-		-webkit-border-radius: 10px; /* Safari, Chrome */
-		border-radius: 10px; /* CSS3 */
+ 	.wrapper {
 		background-color: #fffcf2;
 		margin-left: auto;
 		margin-right: auto;
@@ -76,6 +72,9 @@
 		background-repeat: repeat-x;
 		height: 115px;
 		width: 100%;
+	}
+	.logo {
+		margin-top: 15px;
 	}
 
 /* #Typography
@@ -398,9 +397,6 @@
 	.remove-bottom { margin-bottom: 0 !important; }
 	.half-bottom { margin-bottom: 10px !important; }
 	.add-bottom { margin-bottom: 20px !important; }
-	.container.body{
-		background:url("cream-pat.jpg") repeat;
-	}
 	.top-row {
 		height: 20px;
 		width: 100%;

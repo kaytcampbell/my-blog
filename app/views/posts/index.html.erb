@@ -1,6 +1,5 @@
-	
-
-    <div class="container">
+<div class="wrapper">
+<div class="container">
 	<%= render 'header' %>
 		<div class="sixteen columns">
         	<hr />
@@ -19,9 +18,10 @@
 			<% @posts.each do |post| %>
 			  
 				<h3><%= post.title %></h3>
+				<p>Posted <%= post.created_at.strftime("%B %d, %Y") %></p>
 				<p><%= post.body %></p>
-				<%= link_to 'Show', post %><br />
-				<%= link_to 'Edit', edit_post_path(post) %><br />
+				<%= link_to 'View Post', post %> | 
+				<%= link_to 'Edit', edit_post_path(post) %> | 
 				<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %><br />
 			  
 			<% end %>
@@ -56,7 +56,7 @@
 	<%= render 'footer' %>
 	
 	</div><!-- container -->
-
+	</div>
 	<!-- JS
 	================================================== -->
 	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
