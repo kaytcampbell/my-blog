@@ -411,3 +411,6 @@
 	a:hover img {
 		border: none;
 	}
+	.date-time {
+		font-size: 10px;
+	}

@@ -1,36 +1,62 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Title:</b>
-  <%= @post.title %>
-</p>
-
-<p>
-  <b>Body:</b>
-  <%= @post.body %>
-</p>
-
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
-
-
-<%= render :partial => @post.comments %>
-
-<h2>Comments</h2>
-
-<%= form_for([@post, @post.comments.build]) do |f| %>
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :body %><br />
-    <%= f.text_area :body %>
-  </div>
-  <p><%= f.submit %></p>
-<% end %>
+<div class="wrapper">
+	<div class="container">
+		<%= render 'header' %>
+			<div class="sixteen columns">
+				<hr />
+			</div> 
+			<div class="twelve columns">
+				<div class="twelve columns">
+					<p id="notice"><%= notice %></p>
+					
+					<p>
+					  <h2><%= @post.title %></h2><div class="date-time"><%= @post.created_at.strftime("%d %B, %Y") %></div>
+					</p>
+					
+					<p>
+					  <%= @post.body %>
+					</p>
+					
+					<%= link_to 'Edit', edit_post_path(@post) %> |
+					<%= link_to 'Back', posts_path %>	
+				</div>
+				<div class="twelve columns">
+					<br /><br />
+					<h2>Comments (<% display_count ||= true %>
+					<%= display_count ? @post.comments.count : '' %> )
+					</h2>
+					<%= render :partial => @post.comments %>
+					
+					<%= form_for([@post, @post.comments.build]) do |f| %>
+					  <div class="field">
+						<%= f.label :name %><br />
+						<%= f.text_field :name %>
+					  </div>
+					  <div class="field">
+						<%= f.label :email %><br />
+						<%= f.text_field :email %>
+					  </div>
+					  <div class="field">
+						<%= f.label :body %><br />
+						<%= f.text_area :body %>
+					  </div>
+					  <p><%= f.submit %></p>
+					<% end %>
+				</div>
+			</div>	
+			<div class="three columns offset-by-one">
+				<h3>Side Nav Links</h3>
+				<p>Some links are below:</p>
+				<ul class="square">
+					<li><a href="#">Side Nav Link #1</a></li>
+					<li><a href="#">Side Nav Link #2</a></li>
+					<li><a href="#">Side Nav Link #3</a></li>
+				</ul>
+			</div>
+		
+		<%= render 'footer' %>
+	</div><!-- container -->
+</div><!-- wrapper -->
+<!-- JS
+================================================== -->
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="javascripts/tabs.js"></script>

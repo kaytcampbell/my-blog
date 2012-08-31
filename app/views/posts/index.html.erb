@@ -6,34 +6,18 @@
         </div> 
         <div class="twelve columns">
         	<div class="twelve columns">
-			<h1>Posts</h1>
-			<%= render @posts %>
-			<br />
-			<%= link_to 'New Post', new_post_path %>
-			
-			
-			<br />
-			
-            <hr class="light" />
-		</div>
-        <div class="twelve columns">
-			<h3>This is Another Blog Post</h3>
-			<p>Skeleton is a small collection of well-organized CSS &amp; JS files that can help you rapidly develop sites that look beautiful at any size, be it a 17" laptop screen or an iPhone. It's based on a responsive grid, but also provides very basic CSS for typography, buttons, tabs, forms and media queries. Go ahead, resize this super basic page to see the grid in action.</p>
-            <hr class="light" />
-		</div>
-        <div class="twelve columns">
-			<h3>This Site Brought to You By...</h3>
-			<p>Skeleton is a small collection of well-organized CSS &amp; JS files that can help you rapidly develop sites that look beautiful at any size, be it a 17" laptop screen or an iPhone. It's based on a responsive grid, but also provides very basic CSS for typography, buttons, tabs, forms and media queries. Go ahead, resize this super basic page to see the grid in action.</p>
-            <p><a href="http://www.getskeleton.com/#examples" target="_blank">Find out more about Skeleton here</a></p>
-		</div>
+				<h1>Posts</h1>
+				<%= render @posts %>
+				<br />
+				<br />
+				<hr class="light" />
+			</div>
         </div>
         <div class="three columns offset-by-one">
 			<h3>Side Nav Links</h3>
 			<p>Some links are below:</p>
 			<ul class="square">
-				<li><a href="#">Side Nav Link #1</a></li>
-				<li><a href="#">Side Nav Link #2</a></li>
-				<li><a href="#">Side Nav Link #3</a></li>
+				<li><%= link_to 'New Post', new_post_path %></li>
 			</ul>
 		</div>
 	
