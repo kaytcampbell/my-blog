@@ -1,8 +1,7 @@
 <%= div_for comment do %>
   
   <p>
-    <b>Name:</b>
-    <%= comment.name %>
+    <div class="comment-author"><%= comment.name %></div> <div class="date-time"><%= comment.created_at.strftime("%d %B, %Y") %></div>
   </p>
 
   <p>

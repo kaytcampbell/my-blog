@@ -413,4 +413,10 @@
 	}
 	.date-time {
 		font-size: 10px;
+		display: inline;
+	}
+	.comment-author {
+		display:inline;
+		font-weight: bold;
+		font-size: 14px;
 	}
