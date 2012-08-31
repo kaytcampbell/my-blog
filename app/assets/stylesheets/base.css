@@ -108,7 +108,7 @@
 	blockquote cite a, blockquote cite a:visited, blockquote cite a:visited { color: #555; }
 
 	hr { border: solid #fff; border-width: 1px 0 0; clear: both; margin: 10px 0 30px; height: 0; }
-	.light { border: solid #daecfd; border-width: 1px 0 0; clear: both; margin: 10px 0 30px; height: 0; }
+	.light { border: solid #e7d67e; border-width: 1px 0 0; clear: both; margin: 10px 0 30px; height: 0; }
 
 
 /* #Links
@@ -415,7 +415,7 @@
 		font-size: 10px;
 		display: inline;
 	}
-	.comment-author {
+	.title {
 		display:inline;
 		font-weight: bold;
 		font-size: 14px;

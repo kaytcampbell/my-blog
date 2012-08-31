@@ -1,0 +1,24 @@
+<div class="wrapper">
+	<div class="container">
+		<%= render 'posts/header' %>
+			<div class="sixteen columns">
+				<hr />
+			</div> 
+			<div class="twelve columns">
+				<div class="twelve columns">
+					<p id="notice"><%= notice %></p>
+
+					<%= link_to 'Back to all posts', posts_path %>
+					
+					<h2>Posts with tag <%= @tag.name %></h2>
+					
+					<%= render @posts %>
+				</div>
+			</div>
+			<%= render 'posts/footer' %>
+	</div><!-- container -->
+</div><!-- wrapper -->
+<!-- JS
+================================================== -->
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="javascripts/tabs.js"></script>

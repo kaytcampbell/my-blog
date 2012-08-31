@@ -10,7 +10,6 @@
 				<%= render @posts %>
 				<br />
 				<br />
-				<hr class="light" />
 			</div>
         </div>
         <div class="three columns offset-by-one">
@@ -18,6 +17,7 @@
 			<p>Some links are below:</p>
 			<ul class="square">
 				<li><%= link_to 'New Post', new_post_path %></li>
+				<li><%= render(:partial => 'shared/side') %></li>
 			</ul>
 		</div>
 	

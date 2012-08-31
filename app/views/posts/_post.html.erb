@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <h2><%= post.title %><h2>
+  <div class="title"><%= post.title %></div>
   <div class="date-time"><%= post.created_at.strftime("%d %B, %Y") %></div>
 </p>
 
@@ -9,12 +9,17 @@
   <%= truncate(post.body, :length => 350) %>
 </p>
 					
-
+<%= link_to 'View Post', post %> |
 <%= link_to "Comments (#{post.comments.count})", post %> | 
 <%= link_to 'Edit', edit_post_path(post) %> |
 <%= link_to 'Back', posts_path %> | 
-<%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %> |
-<%= link_to 'View Post', post %>
+<%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>
+<p>Tags:
+					  <% post.tags.each do |tag|%>
+						<%= tag.name %>
+					   <% end %>
+					</p>
+<hr class="light">
 
 
 
