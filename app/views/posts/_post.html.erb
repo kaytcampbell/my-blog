@@ -16,7 +16,7 @@
 <%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>
 <p>Tags:
 					  <% post.tags.each do |tag|%>
-						<%= tag.name %>
+						<%= link_to "#{tag.name}", tag_path(tag) %>
 					   <% end %>
 					</p>
 <hr class="light">

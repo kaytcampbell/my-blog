@@ -7,6 +7,7 @@ class Post < ActiveRecord::Base
   has_many :tags, :through => :taggings
   attr_writer :tag_names
   after_save :assign_tags
+	default_scope order('created_at DESC')
   
   def tag_names
     @tag_names || tags.map(&:name).join(' ')

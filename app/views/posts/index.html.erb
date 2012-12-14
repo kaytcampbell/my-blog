@@ -7,7 +7,7 @@
         <div class="twelve columns">
         	<div class="twelve columns">
 				<h1>Posts</h1>
-				<%= render @posts %>
+				<%= render @posts, :order => 'created_at ASC' %>
 				<br />
 				<br />
 			</div>
