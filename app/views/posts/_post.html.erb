@@ -10,10 +10,14 @@
 </p>
 					
 <%= link_to 'View Post', post %> |
-<%= link_to "Comments (#{post.comments.count})", post %> | 
-<%= link_to 'Edit', edit_post_path(post) %> |
-<%= link_to 'Back', posts_path %> | 
-<%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>
+<%= link_to "Comments (#{post.comments.count})", post %>  
+
+<% if can? :edit, post  %>
+  <%= link_to 'Edit', edit_post_path(post) %> |
+<% end %>
+<% if can? :delete, post  %>
+  <%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>
+<% end %>
 <p>Tags:
 					  <% post.tags.each do |tag|%>
 						<%= link_to "#{tag.name}", tag_path(tag) %>

@@ -20,7 +20,9 @@
 						<%= link_to "#{tag.name}", tag_path(tag) %>
 					   <% end %>
 					</p>
+					<% if can? :edit, @post  %>
 					<%= link_to 'Edit', edit_post_path(@post) %> |
+					<% end %>
 					<%= link_to 'Back', posts_path %>	
 				</div>
 				<div class="twelve columns">
