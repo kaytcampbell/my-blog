@@ -16,7 +16,9 @@
 			<h3>Side Nav Links</h3>
 			<p>Some links are below:</p>
 			<ul class="square">
-				<li><%= link_to 'New Post', new_post_path %></li>
+				<% if can? :create, @post %>
+					<li><%= link_to 'New Post', new_post_path %></li>
+				<% end %>
 				<li><%= render(:partial => 'shared/side') %></li>
 			</ul>
 		</div>
